@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodefall", "Nodefall\Nodefall.csproj", "{64F81607-FE4B-4B9B-B97B-C93E6774A761}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64F81607-FE4B-4B9B-B97B-C93E6774A761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F81607-FE4B-4B9B-B97B-C93E6774A761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F81607-FE4B-4B9B-B97B-C93E6774A761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F81607-FE4B-4B9B-B97B-C93E6774A761}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {727CF580-5E5A-4732-9900-6B6171ECBA8F}
+	EndGlobalSection
+EndGlobal

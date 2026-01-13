@@ -1,0 +1,43 @@
+﻿<Window x:Class="Nodefall.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nodefall"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="CharcterSelector"
+                  Grid.Row="1" Grid.Column="1"
+                  ItemsSource="{Binding Manager.Characters}" 
+                  SelectedItem="{Binding Manager.SelectedCharacter}"
+                  DisplayMemberPath="Name"/>
+
+        <Button x:Name="PlayButton" 
+                Grid.Row="2" Grid.Column="0"
+                Content="Play"
+                Click="Play_Button_Click"/>
+
+        <Button x:Name="CustomizeButton" 
+                Grid.Row="2" Grid.Column="1"
+                Content="Customization"
+                Click="Customize_Button_Click"/>
+
+        <Button x:Name="InfoButton"
+                Grid.Row="2" Grid.Column="2"
+                Content="Info"
+                Click="Info_Button_Click"/>
+
+    </Grid>
+</Window>

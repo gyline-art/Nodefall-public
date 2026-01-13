@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Nodefall.Windows.Components.CharacterSheet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nodefall.Windows.Components"
+             xmlns:hp="clr-namespace:Nodefall.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="110"
+             x:Name="Sheet">
+    <UserControl.Resources>
+        <hp:BoolToBrushConverter x:Key="BoolToBrush"/>
+    </UserControl.Resources>
+    <Border 
+        CornerRadius="7"
+        BorderThickness="3"
+        BorderBrush="{Binding IsSelected, Converter={StaticResource BoolToBrush}}"
+        Background="Bisque">
+        <Button Click="Sheet_Click"
+                Background="Transparent"
+                BorderThickness="0">
+            <StackPanel Orientation="Vertical">
+
+                <StackPanel Orientation="Horizontal"
+                            Height="15" Width="auto">
+
+                    <TextBlock x:Name="CharName"
+                               Margin="1" Width="auto" Height="auto"
+                               FontWeight="Bold"
+                               Text="{Binding Character.Name}"/>
+
+                    <TextBlock x:Name="CharArchetype"
+                               Margin="1" Width="auto" Height="auto"
+                               Text="{Binding Character.Archetype.Name, StringFormat=({0})}"/>
+
+                </StackPanel>
+
+                <ProgressBar x:Name="HPbar"
+                             Height="14" Width="90" Margin="1"
+                             Maximum="{Binding Character.MaxHP}"
+                             Value="{Binding Character.CurrentHP}"
+                             Background="MediumSeaGreen"
+                             Foreground="LawnGreen"/>
+
+                <ProgressBar x:Name="MPbar"
+                             Height="10" Width="90" Margin="1"
+                             Maximum="{Binding Character.MaxMP}"
+                             Value="{Binding Character.CurrentMP}"
+                             Background="SkyBlue"
+                             Foreground="CadetBlue"/>
+
+            </StackPanel>
+        </Button>
+    </Border>
+</UserControl>
